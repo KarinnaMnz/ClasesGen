@@ -1,0 +1,54 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Main JS-->
+    <script defer src="main.js"></script>
+
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="pokedexLogo.png" alt="Pokedex" class="pokedexLogo" />
+        <h3>*Usando PokeAPI*</h3>
+      </div>
+    </header>
+    <main>
+      <img src="#" alt="pokemon" class="pokemon_image" />
+
+      <h1 class="pokemon_data">
+        <span class="pokemon_number"></span> -
+        <span class="pokemon_name"></span>
+      </h1>
+
+      <form>
+        <input
+          type="search"
+          class="input_search"
+          placeholder="Ingresar # o nombre de Pokémon"
+          required
+        />
+      </form>
+
+      <div class="buttons">
+        <button class="button btn-prev">&lt; Atrás</button>
+        <button class="button btn-next">Siguiente &gt;</button>
+      </div>
+
+      <img src="pokedex3-01.png" alt="pokedex" class="pokedex" />
+    </main>
+  </body>
+</html>

@@ -2,6 +2,7 @@ package com.bestogrupo.thebestogrupo.models;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,7 +31,7 @@ public class Usuario {
     private String usuarioEmail;
 
     @OneToMany(mappedBy = "usuario", cascade=CascadeType.ALL)
-    @JsonBackReference
+    @JsonIgnore
     private List<Tarea> listaDeTareas;
 
 

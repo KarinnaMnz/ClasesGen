@@ -38,7 +38,6 @@ public class Tarea {
 
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
-    @JsonManagedReference
     private Usuario usuario;
 
     @OneToMany(mappedBy = "tarea", cascade = CascadeType.ALL)
