@@ -6,11 +6,11 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Drawer } from "@mui/material";
-export default function Header({ titulo, anio }) {
+import { Avatar, Drawer } from "@mui/material";
+export default function Header({ titulo, anio, avatarUser }) {
   // Entre el enunciado de la función y el return declaro 1- hooks 2- variables 3- funciones
   // Hooks =>
-  // 1. useState :
+  // 1) useState :
   // sintaxis => const [<estado>, <metodo para modificar estado>] = useState(valor inicial);
   ///
   const [open, setOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function Header({ titulo, anio }) {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               {titulo} - {anio}
             </Typography>
-            <Button color="inherit">Login</Button>
+            <Avatar alt="Remy Sharp" src={`${avatarUser}`} />
           </Toolbar>
         </AppBar>
       </Box>

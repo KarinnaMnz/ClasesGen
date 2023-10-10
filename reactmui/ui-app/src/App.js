@@ -1,27 +1,49 @@
+import Footer from "./component/Footer";
 import Header from "./component/Header";
 import Main from "./component/Main";
-import Footer from "./component/Footer";
 import PostForm from "./component/PostForm";
-
+import Post from "./component/Post";
+import user from "./images/alex.jpg";
 const ConfigPage = {
   titulo: "Cohorte 7",
-  autor: "@Javier",
+  autor: "@kari",
   anio: "2023",
 };
-const MiMain = () => {
-  return <h1>Hola gatos</h1>;
+const _data = {
+  usuario: {
+    nombre: "Max",
+    carreo: "max@algo.com",
+    avatar: user,
+  },
+  posts: [
+    {
+      post_id: "1",
+      postContenido: "",
+      postFecha: "",
+      postComentarios: [
+        { comentario_id: "1" },
+        { comentarioTexto: "" },
+        { comentarioFecha: "" },
+      ],
+      counterLikes: 4,
+    },
+  ],
 };
-
-export default function app() {
+export default function App() {
   return (
     <>
-      <Header titulo={ConfigPage.titulo} anio={ConfigPage.anio} />
+      {/* Este es un comentario */}
+      <Header
+        titulo={ConfigPage.titulo}
+        anio={ConfigPage.anio}
+        avatarUser={_data.usuario.avatar}
+      />
       <Main>
-        <MiMain />
-        {/* 1° hijo del render index.js , pasando otro componente como propiedad "Children"*/}
-        <PostForm />
+        <PostForm userPost={_data.usuario} />{" "}
+        {/* pasando otro componente como propiedad "Children" */}
+        <Post />
       </Main>
-      <Footer autor={ConfigPage.autor} />
+      <Footer autorr={ConfigPage.autor} />
     </>
   );
 }

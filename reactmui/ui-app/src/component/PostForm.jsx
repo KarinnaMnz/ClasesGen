@@ -1,8 +1,11 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-export default function PostForm() {
+import Avatar from "@mui/material/Avatar";
+export default function PostForm({ userPost }) {
   return (
     <div className="content-post-form">
+      <Avatar alt="Remy Sharp" src={`${userPost.avatar}`} />
+      <h6>{userPost.nombre}</h6>
       <TextField
         id="filled-multiline-static"
         label="Multiline"
@@ -19,7 +22,6 @@ export default function PostForm() {
       >
         Guardar
       </Button>
-         
     </div>
   );
 }
