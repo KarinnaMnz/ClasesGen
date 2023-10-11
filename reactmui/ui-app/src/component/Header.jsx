@@ -48,6 +48,7 @@ export default function Header({ titulo, anio, avatarUser }) {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               {titulo} - {anio}
             </Typography>
+
             <Avatar alt="Remy Sharp" src={`${avatarUser}`} />
           </Toolbar>
         </AppBar>
